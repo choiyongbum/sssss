@@ -1,31 +1,56 @@
-<! DOCTYPE HTML>
-<html 랭="ko">
-<머리>
-    <메타 샤셋="UTF-8">
-    <메타 이름="뷰포트 "콘텐츠="너비=장치 너비, 초기 규모=1.0">
-    <메타 http-equiv="X-UA 호환 "콘텐츠="즉=가장자리">
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+    <!-- <script src="jquery-3.5.0.js"></script> -->
+</head>
+<href= "style.css">
+<body>
 
-    <메타 속성="og:제목 "콘텐츠="데리시프로이즈?">
-    <메타 속성="og:설명 "콘텐츠="[]">
-
-    <링크 rel="스타일 시트 "href="스타일.css">
-    <타이틀>니드 월어드? </제목>
-</머리>
-<몸>
-    <div 클래스="래퍼">
-        <div 클래스="헤더">
-            <스팬 ID="날짜">&lt;/스팬 >
-        </Div>
-        <div 클래스="상자">
-            <div 클래스="상단">엔디처 겸 임하부>
-            <div 클래스="중간">&span id=" 주번호"></스팬>주/0&/div >
-            <div 클래스="봇">일! &/div>
-        </Div>
-        <div 클래스="풋터">
-            < a href="https://github.com/nyeong/nth-week-today">소스&lt;/a>
-        </Div>
-    </Div>
-
-    <스크립트 src="스크립트.js">&lt;/스크립트 >
-</몸>
-</Html>
+    <table>
+        <caption id="display">계산기</caption>
+        <tr>
+            <th colspan="4"><input id="resultbox" type="text" name="result" value="0"></th>
+        </tr>
+        <tr>
+            <td><input class="button" type="button" value="7" onclick="insert(7)"></td>
+            <td><input class="button" type="button" value="8" onclick="insert(8)"></td>
+            <td><input class="button" type="button" value="9" onclick="insert(9)"></td>
+            <td><input class="button" type="button" value="＋" onclick="insertop('+')"></td>
+        </tr>
+        <tr>
+            <td><input class="button" type="button" value="4" onclick="insert(4)"></td>
+            <td><input class="button" type="button" value="5" onclick="insert(5)"></td>
+            <td><input class="button" type="button" value="6" onclick="insert(6)"></td>
+            <td><input class="button" type="button" value="-" onclick="insertop('-')"></td>
+        </tr>
+        <tr>
+            <td><input class="button" type="button" value="1" onclick="insert(1)"></td>
+            <td><input class="button" type="button" value="2" onclick="insert(2)"></td>
+            <td><input class="button" type="button" value="3" onclick="insert(3)"></td>
+            <td><input class="button" type="button" value="×" onclick="insertop('*')"></td>
+        </tr>
+        <tr>
+            <td colspan="3"><input class="button" type="button" value="0" onclick="insert(0)"></td>
+            <td><input class="button" type="button" value="÷" onclick="insertop('/')"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input id="cls_btn" class="cls_btn" type="button" value="C" onclick="location.reload();"></td>
+            <td colspan="2"><input id="result_btn" class="result_btn" type="button" value="＝" onclick="equal()"></td>
+        </tr>
+        <tr>
+            <th colspan="4">메모리:<input id="memory1" type="text" name="result" value=""></th>
+        </tr>
+        <tr>
+            <th colspan="4">마지막입력:<input id="memory2" type="text" name="result" value=""></th>
+        </tr>
+        <tr>
+            <th colspan="4">연산자:<input id="operator" type="text" name="result" value=""></th>
+        </tr>
+    </table>
+    
+    <script src="script.js"></script>
+</body>
+</html>
