@@ -13,6 +13,7 @@
         }
         
         function insertop(value){
+            memory1Box.value = value;
             memory2Box.value = value;
             operatorBox.value = value;
             memory1Box.value = resultBox.value;
@@ -22,16 +23,16 @@
         function equal(){
             resultVal = resultBox.value;
             memory1Val = memory1Box.value;
-            if (memory2.value === "=")
+            if (memory1.value === "=")
             {
-                resultStr = resultBox.value+operatorBox.value+memory1Box.value;                
+                resultStr = memory1Box.value+operatorBox.value+memory2Box.value;                
             }
             else {
-                resultStr = resultBox.value+operatorBox.value+memory1Box.value;
-                memory1Box.value = resultVal;
+                resultStr = memory1Box.value+operatorBox.value+memory2Box.value;
+                memory2Box.value = resultVal;
             }
             resultBox.value = eval(resultStr);
             memory2.value = "=";
         }   
 
-   
+    
