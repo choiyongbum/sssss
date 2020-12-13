@@ -1,7 +1,6 @@
-
-        var resultBox = document.getElementById('resultbox');
-        var memory1Box = document.getElementById("memory1");
-        var memory2Box = document.getElementById("memory2");
+  var resultBox = document.getElementById('resultbox');
+        var number1Box = document.getElementById("number1");
+        var number2Box = document.getElementById("number2");
         var operatorBox = document.getElementById("operator");
         
         function insert(value){
@@ -9,30 +8,28 @@
                 resultBox.value = '';
             }
             resultBox.value += value;
-            memory2.value = value;
+            number2.value = value;
         }
         
         function insertop(value){
-            memory1Box.value = value;
-            memory2Box.value = value;
+            number1Box.value = value;
+            number2Box.value = value;
             operatorBox.value = value;
-            memory1Box.value = resultBox.value;
+            number1Box.value = resultBox.value;
             resultBox.value = "0";
         }
 
         function equal(){
             resultVal = resultBox.value;
-            memory1Val = memory1Box.value;
-            if (memory1.value === "=")
+            number1Val = number1Box.value;
+            if (number1.value === "=")
             {
-                resultStr = memory1Box.value+operatorBox.value+memory2Box.value;                
+                resultStr = number1Box.value+operatorBox.value+number2Box.value;                
             }
             else {
-                resultStr = memory1Box.value+operatorBox.value+memory2Box.value;
-                memory2Box.value = resultVal;
+                resultStr = number1Box.value+operatorBox.value+number2Box.value;
+                number2Box.value = resultVal;
             }
             resultBox.value = eval(resultStr);
-            memory2.value = "=";
+            number2.value = "=";
         }   
-
-    
