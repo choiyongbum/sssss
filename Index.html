@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
     <title>계산기</title>
     <!-- <script src="jquery-3.5.0.js"></script> -->
 </head>
@@ -8,7 +9,7 @@
 <body>
 
     <table>
-        <caption id="display">계산기</caption>
+        <caption id="calculator">계산기</caption>
         <tr>
             <th colspan="4"><input id="resultbox" type="text" name="result" value="0"></th>
         </tr>
@@ -39,14 +40,15 @@
             <td colspan="2"><input id="result_btn" class="result_btn" type="button" value="＝" onclick="equal()"></td>
         </tr>
         <tr>
-            <th colspan="4">메모리:<input id="memory1" type="text" name="result" value=""></th>
-        </tr>
-        <tr>
-            <th colspan="4">마지막입력:<input id="memory2" type="text" name="result" value=""></th>
+            <th colspan="4">값:<input id="number1" type="text" name="result" value=""></th>
         </tr>
         <tr>
             <th colspan="4">연산자:<input id="operator" type="text" name="result" value=""></th>
         </tr>
+        <tr>
+            <th colspan="4">마지막 입력:<input id="number2" type="text" name="result" value=""></th>
+        </tr>
+        
     </table>
     <a href="https://github.com/choiyongbum/sssss">source</a>
     <script src="script.js"></script>
