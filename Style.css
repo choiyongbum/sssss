@@ -1,6 +1,7 @@
 <style>
+        background-color:FCFCFC;
         caption{ font-size: 32px; }
-        table {width: 320px;}
+        table {width: 400px;}
         th{
             padding-right: 10px;
             height: 80px;
@@ -17,14 +18,14 @@
         }
         td > input[type="button"]{
             width: 100%; height: inherit;
-            color: #333; font-size: 36px;
+            color: #333; font-size: 48px;
             border: none;
         }
         td > input[type=button]:hover{
-            background: #999;
+            background: #900;
         }
         td:last-child > input{
-            background: orange;
+            background: blue;
             color:white;
         }
     </style>
