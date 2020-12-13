@@ -1,4 +1,4 @@
-<script>
+
         var resultBox = document.getElementById('resultbox');
         var memory1Box = document.getElementById("memory1");
         var memory2Box = document.getElementById("memory2");
@@ -34,4 +34,4 @@
             memory2.value = "=";
         }   
 
-    </script>
+   
